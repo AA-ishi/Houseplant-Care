@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Houseplant Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+        <h1 class="title">室内観葉植物のお手入れ方法</h1>
+        <h2 class="subtitle">How to care for indoor plants</h2>
+
+        <label class="label">🌱 植物の名前を入力してください:</label>
+        <input type="text" id="plantName" placeholder="例：モンステラ">
+
+        <label class="label">🏠 置いてある場所を選択してください:</label>
+        <select id="location">
+            <option value="日がよく当たる窓際">日がよく当たる窓際</option>
+            <option value="あまり日が当たらない窓際">あまり日が当たらない窓際</option>
+            <option value="明るいけれど窓際ではない場所">明るいけれど窓際ではない場所</option>
+            <option value="日が当たらない場所">日が当たらない場所</option>
+        </select>
+
+        <button id="runBtn">クリックしてね 💧🌿</button>
+
+        <div id="wateringResult" class="result-box"></div>
+        <div id="aiResult" class="result-box"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
