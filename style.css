@@ -1,3 +1,6 @@
+/* ============================
+   PC（デフォルト）
+============================ */
 body {
     margin: 0;
     font-family: "Hiragino Sans", sans-serif;
@@ -99,3 +102,55 @@ button:hover {
     font-size: 15px;
 }
 
+
+/* ============================
+   スマホ（600px以下）
+   Androidで読みやすくする調整
+============================ */
+@media (max-width: 600px) {
+
+    /* 背景の高さを安定させる */
+    .background {
+        height: 100dvh;
+    }
+
+    /* タイトルをスマホ向けに縮小 */
+    .title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* サブタイトルも少し小さく */
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* テキストの読みやすさ向上（改行を自動調整） */
+    .guide-text,
+    .result-box,
+    .subtitle {
+        white-space: normal;   /* ← PCの改行をスマホでは無効化 */
+        line-height: 1.6;
+    }
+
+    /* 入力欄の拡大防止（Android特有の問題） */
+    input, select {
+        font-size: 16px; /* 16px未満だと勝手に拡大される */
+    }
+
+    /* ボタンを押しやすく */
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* コンテナの余白調整 */
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+}
