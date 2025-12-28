@@ -2,23 +2,32 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!-- スマホ表示を正しくするための設定 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Houseplant Care</title>
+
+    <!-- 外部CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- 背景画像 -->
     <div class="background"></div>
 
+    <!-- メインコンテンツ（カード） -->
     <div class="container">
+
+        <!-- タイトル -->
         <h1 class="title">室内観葉植物のお手入れ方法</h1>
         <h2 class="subtitle">How to care for indoor plants</h2>
 
+        <!-- 植物名入力欄 -->
         <div class="form-group">
             <label for="plantName" class="label">🌱 植物の名前を入力してください:</label>
             <input type="text" id="plantName" placeholder="例：モンステラ">
         </div>
 
+        <!-- 置き場所選択 -->
         <div class="form-group">
             <label for="location" class="label">🏠 置いてある場所を選択してください:</label>
             <select id="location">
@@ -29,22 +38,21 @@
             </select>
         </div>
 
+        <!-- 実行ボタン -->
         <button id="runBtn" type="button">クリックしてね 💧🌿</button>
 
+        <!-- 説明文（ガイド） -->
         <p class="guide-text">
-        植物の名前と置き場所を置いてボタンをクリックすると <ber> 管理方法のアドバイスが表示されます🌱
+            植物の名前と置き場所を置いてボタンをクリックすると管理方法のアドバイスが表示されます🌱
         </p>
 
+        <!-- AIの結果表示エリア -->
         <div id="wateringResult" class="result-box"></div>
         <div id="aiResult" class="result-box"></div>
+
     </div>
 
+    <!-- JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
