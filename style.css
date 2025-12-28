@@ -123,7 +123,7 @@ button:hover {
 
     /* タイトルは自然に上へ移動するが、少し小さくもする */
     .title {
-        font-size: 28px;
+        font-size: 26px;
         margin-top: 5px; /* ← さらに上へ寄せる */
     }
 
@@ -139,3 +139,4 @@ button:hover {
         background: rgba(255,255,255,0.3);
     }
 }
+
