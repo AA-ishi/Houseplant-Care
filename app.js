@@ -81,7 +81,7 @@ document.getElementById("runBtn").addEventListener("click", async () => {
         const adjusted = adjustWatering(base, location);
 
         document.getElementById("wateringResult").textContent =
-            `💧 水やり頻度\n${adjusted} 日ごとに水やりをしてみましょう。\n鉢底から水が流れるくらいタップリあげてください。\n植物の様子を見て頻度を調整しましょう。`;
+            `💧 水やり頻度\n${adjusted} 日ごとに水やりをしてみましょう。\n鉢底から水が流れるくらいタップリあげてください。\n植物の様子を見て頻度を調整しましょう。\nこのアドバイスはきっかけです慣れてきたらご自身の感覚を大切にしてくださいね`;
     } else {
         document.getElementById("wateringResult").textContent =
             "水やりの頻度は育て方を参考にしてください。";
@@ -91,3 +91,4 @@ document.getElementById("runBtn").addEventListener("click", async () => {
     const aiText = await callAI(plantName);
     document.getElementById("aiResult").textContent = aiText;
 });
+
