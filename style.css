@@ -113,39 +113,29 @@ button:hover {
 ============================ */
 @media screen and (max-width: 768px) {
 
-    /* カード感を消す（背景を薄く or 完全透明） */
+    /* カードを背景と同じ位置から始める */
     .container {
-        background: rgba(255,255,255,0.0); /* ← 完全透明でカード消える */
-        /* 少し残したいなら 0.3 に変更してね */
-        /* background: rgba(255,255,255,0.3); */
+        margin-top: 10px; /* ← ここを小さくして背景と一体化 */
+        background: rgba(255,255,255,0.0); /* 完全透明 */
         box-shadow: none;
+        padding: 15px;
     }
 
+    /* タイトルは自然に上へ移動するが、少し小さくもする */
     .title {
         font-size: 28px;
+        margin-top: 5px; /* ← さらに上へ寄せる */
     }
 
-    .subtitle {
-        font-size: 16px;
-    }
-
-    /* 説明文はスマホではつなげる */
+    /* 説明文は改行なしで統一 */
     .guide-text {
         white-space: normal;
         line-height: 1.6;
     }
 
-    /* AI回答もスマホでは読みやすく */
     .result-box {
         white-space: normal;
         line-height: 1.7;
-        background: rgba(255,255,255,0.3); /* ← 読みやすさのため少しだけ背景残す */
+        background: rgba(255,255,255,0.3);
     }
-
-    .container {
-        margin: 20px 10px;
-        padding: 15px;
-    }
-
-    /* ボタンは上書きしない → PCと同じ見た目のまま */
 }
