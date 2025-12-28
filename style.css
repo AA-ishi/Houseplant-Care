@@ -24,3 +24,10 @@ button:hover {
 .container {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+.guide-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2e7d32; /* 優しいグリーン */
+    font-weight: bold;
+}
