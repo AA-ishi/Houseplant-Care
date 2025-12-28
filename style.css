@@ -1,6 +1,7 @@
 /* ============================
    PC（デフォルト）
 ============================ */
+
 body {
     margin: 0;
     font-family: "Hiragino Sans", sans-serif;
@@ -17,14 +18,14 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 1; /* ← 背景画像そのまま */
 }
 
 .container {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.6); /* ← PCは読みやすさ優先 */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -37,13 +38,15 @@ body {
                  -2px 2px 0 #000, 2px 2px 0 #000;
     margin-top: 20px;
     margin-bottom: 10px;
+    white-space: nowrap; /* ← 1行に固定 */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .subtitle {
     font-size: 20px;
     text-align: center;
     color: #555;
-    text-shadow: none;
     margin-bottom: 30px;
 }
 
@@ -68,6 +71,7 @@ input, select {
     font-size: 16px;
 }
 
+/* ボタンは PC と同じデザインのまま */
 button {
     display: block;
     margin: 20px auto 10px;
@@ -91,6 +95,7 @@ button:hover {
     font-size: 17px;
     color: #2e7d32;
     font-weight: bold;
+    white-space: pre-wrap; /* ← PCでは改行を維持 */
 }
 
 .result-box {
@@ -98,60 +103,49 @@ button:hover {
     padding: 15px;
     background: rgba(255,255,255,0.85);
     border-radius: 8px;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* ← PCでは改行維持 */
     font-size: 15px;
 }
 
 
 /* ============================
-   スマホ（600px以下）
-   Androidで読みやすくする調整
+   スマホ（768px以下）
 ============================ */
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
-    /* 背景の高さを安定させる */
-    .background {
-        height: 100dvh;
+    /* カード感を消す（背景を薄く or 完全透明） */
+    .container {
+        background: rgba(255,255,255,0.0); /* ← 完全透明でカード消える */
+        /* 少し残したいなら 0.3 に変更してね */
+        /* background: rgba(255,255,255,0.3); */
+        box-shadow: none;
     }
 
-    /* タイトルをスマホ向けに縮小 */
     .title {
         font-size: 28px;
-        line-height: 1.2;
-        margin-top: 10px;
-        margin-bottom: 5px;
     }
 
-    /* サブタイトルも少し小さく */
     .subtitle {
         font-size: 16px;
-        margin-bottom: 20px;
     }
 
-    /* テキストの読みやすさ向上（改行を自動調整） */
-    .guide-text,
-    .result-box,
-    .subtitle {
-        white-space: normal;   /* ← PCの改行をスマホでは無効化 */
+    /* 説明文はスマホではつなげる */
+    .guide-text {
+        white-space: normal;
         line-height: 1.6;
     }
 
-    /* 入力欄の拡大防止（Android特有の問題） */
-    input, select {
-        font-size: 16px; /* 16px未満だと勝手に拡大される */
+    /* AI回答もスマホでは読みやすく */
+    .result-box {
+        white-space: normal;
+        line-height: 1.7;
+        background: rgba(255,255,255,0.3); /* ← 読みやすさのため少しだけ背景残す */
     }
 
-    /* ボタンを押しやすく */
-    button {
-        width: 100%;
-        padding: 14px;
-        font-size: 18px;
-    }
-
-    /* コンテナの余白調整 */
     .container {
         margin: 20px 10px;
         padding: 15px;
     }
-}
 
+    /* ボタンは上書きしない → PCと同じ見た目のまま */
+}
