@@ -21,13 +21,13 @@ body {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.6);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .title {
-    font-size: 54px;
+    font-size: 42px;
     text-align: center;
     color: white;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000,
@@ -39,8 +39,8 @@ body {
 .subtitle {
     font-size: 20px;
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 2px #000;
+    color: #555;
+    text-shadow: none;
     margin-bottom: 30px;
 }
 
@@ -98,3 +98,4 @@ button:hover {
     white-space: pre-wrap;
     font-size: 15px;
 }
+
